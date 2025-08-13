@@ -1,0 +1,33 @@
+{
+    "name": "data-visualizer",
+    "version": "1.0.0", 
+    "description": "A simple data visualization tool using D3.js",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx live-server --port=3000 --=/index.html",
+        "dev": "npx live-server --port=3000 --watch=index.html --watch=style.css --watch=script.js",
+        "build": "echo 'No Build process needed for static files'",
+        "serve": "npx http-server -p 8080 -c-1"
+    },
+    "keywords": [
+        "data",
+        "visualization",
+        "d3.js",
+        "web",
+        "static",
+        "analytics",
+        "pink-theme",
+        "interactive",
+        "dashboard",
+        "chat-bot"
+    ],
+    "author": "Joshua Bambe",
+    "license": "MIT",
+    "dependencies": {
+        "live-server": "^1.2.2",
+        "http-server": "^14.1.1"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}

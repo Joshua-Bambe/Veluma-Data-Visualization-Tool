@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veluma - Minimalist Data Visualizer Chat Assistant</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="grid-container">
+        <div class="grid-lines" id="gridLines"></div>
+    </div>
+    
+    <div class="floating-particles" id="particles"></div>
+    
+    <div class="data-nodes" id="dataNodes"></div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Veluma
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff69b4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    <line x1="12" y1="12" x2="12.01" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
+            <div class="subtitle">Hi! I am your personal chat assistant that can help you will anything data related your need!</div>
+    </div>
+    <div class="chat-interface">
+        <div class="messages" id="messages">
+            <div class="message bot-message">
+                <p>Welcome!👋 I'm Veluma. How can I assist you with your data visualization needs today? I can help you visualize any data you have.</p>
+                
+                <div class="examples">
+                        <div class="example-card" onclick="useExample('sales')">
+                            <div class="example-title">Sales Data</div>
+                            <div class="example-desc">User feedback, ratings, & demographic data</div>
+                        </div>
+                        <div class="example-card" onclick="useExample('survey')">
+                            <div class="example-title">Survey Results</div>
+                            <div class="example-desc">Campaign performance, audience engagement, & conversion rates</div>
+                        </div>
+                        <div class="example-card" onclick="useExample('website')">
+                            <div class="example-title">Finance Data</div>
+                            <div class="example-desc">Traffic patterns, user behavior, & conversion rates</div>
+                        </div>
+                        <div class="example-card" onclick="useExample('fitness')">
+                            <div class="example-title">Personal Fitness Metrics</div>
+                            <div class="example-desc">Fitness tracking, habit formation, & progression statistics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="input-container">
+            <input type="text" class="input-field" id="userInput" placeholder="Describe your data or paste your data here..." onkeypress="handleKeyPress(event)">
+            <button class="send-button" onclick="sendMessage()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22, 2 15, 22 11, 13 2, 9"></polygon>
+                </svg>
+            </button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div style="color: #ff69b4; margin-bottom: 10px;"> </div>
+            <div class="loading-dots">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+            <div class="loading-text">Processing your request...</div>
+        </div>
+    </div>
+
+        <div class="visualization-container" id="visualization" style="display: none;">
+            <h3 style="color: #ff69b4; margin-bottom: 15px;">Your Data Visualization:</h3>
+            <div class="chart-container">
+                <canvas id="chart" width="400" height="215"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
