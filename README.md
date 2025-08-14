@@ -26,6 +26,8 @@ Veluma is a clean, minimalistic data visualization web app tool that mimics chat
 ## Demo
 <img width="2298" height="1327" alt="image" src="https://github.com/user-attachments/assets/180b537b-ac12-4a94-9a20-c59c3b77563b" />
 
+<img width="2300" height="1331" alt="image" src="https://github.com/user-attachments/assets/0e8cdbc8-3743-429c-a4a4-c985d1bc75f5" />
+
 ## License
 This project is licensed under the MIT License.
 
